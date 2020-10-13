@@ -26,23 +26,3 @@ body {
 }
 
 
-
-
-
-#logo {
-  animation-delay: 50ms;
-}
-
-.location {
-  animation-delay: 100ms;
-}
-
-container h1 {
-  animation-delay: 150ms;
-}
-.visit p {
-  animation-delay: 200ms;
-}
-.visit a {
-  animation-delay: 250ms;
-}
