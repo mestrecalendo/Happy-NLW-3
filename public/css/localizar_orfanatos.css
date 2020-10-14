@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-#container-orfanato {
+#container-localizar-orfanato {
   width: 100%;
   height: 100%;
   display: flex;
@@ -42,7 +42,7 @@ a.cadastrar-orfanato {
   width: 6.4rem;
   height: 6.4rem;
   background: #15c3d6;
-
+  z-index: 10;
   display: flex;
   align-items: center;
   border: 0;
@@ -58,6 +58,8 @@ a.cadastrar-orfanato:hover {
 #mapid {
   height: 100%;
   width: 100%;
+
+  animation-delay: 200ms;
 }
 
 .leaflet-popup-content-wrapper {
@@ -98,4 +100,6 @@ a.cadastrar-orfanato:hover {
 .leaflet-popup-tip {
   display: none;
 }
-
+.leaflet-container {
+  z-index: 5;
+}

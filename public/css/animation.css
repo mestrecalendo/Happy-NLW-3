@@ -19,6 +19,15 @@
   }
 }
 
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .animate-up {
   animation: up 1000ms backwards;
 }
@@ -26,4 +35,9 @@
 .animate-rigth {
   animation-name: rigth;
   animation-duration: 200ms;
+}
+
+.animation-appear {
+  animation: appear 500ms backwards;
+  
 }
