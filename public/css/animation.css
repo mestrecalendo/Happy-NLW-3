@@ -10,6 +10,20 @@
   }
 }
 
+@keyframes rigth {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 .animate-up {
   animation: up 1000ms backwards;
+}
+
+.animate-rigth {
+  animation-name: rigth;
+  animation-duration: 200ms;
 }
