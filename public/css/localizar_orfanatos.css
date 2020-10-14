@@ -35,7 +35,7 @@ aside footer p {
 
 /*button*/
 
-a.criar-orfanato {
+a.cadastrar-orfanato {
   position: absolute;
   right: 4rem;
   bottom: 4rem;
@@ -51,7 +51,7 @@ a.criar-orfanato {
   transition: background-color 0.2s;
 }
 
-a.criar-orfanato:hover {
+a.cadastrar-orfanato:hover {
   background: #17d6eb;
 }
 
@@ -59,3 +59,43 @@ a.criar-orfanato:hover {
   height: 100%;
   width: 100%;
 }
+
+.leaflet-popup-content-wrapper {
+  background: rgba(255, 255, 255, 0.8);
+
+  border-radius: 20px;
+}
+
+.leaflet-popup-content {
+  color: #0089a5;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0.8rem 1.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leaflet-popup-content a {
+  width: 4rem;
+  height: 4rem;
+  background: #15c3d6;
+  box-shadow: 17.2868px 27.6589px 41.4884px rgba(23, 142, 166, 0.16);
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+}
+
+.leaflet-popup-content a:hover {
+  background: #17d6eb;
+}
+
+.leaflet-popup-tip {
+  display: none;
+}
+
