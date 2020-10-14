@@ -1,8 +1,6 @@
 # Happy NLW#3
 <h3>Projeto desenvolvido na Next Level Week 3</h3>
 <hr>
-<br>
-
 <div>
 <img src="./imgp/nlw.jpg" width="1000px"/>
 </div>
