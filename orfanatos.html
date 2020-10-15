@@ -31,29 +31,75 @@
   </head>
   <body>
     <div id="container-orfanato">
-      <aside class="animate-rigth">
-        <header>
-          <img src="./public/images/map-marker.svg" alt="Happy" />
-          <h2>Esolha um orfanato no mapa</h2>
-          <p>Muitas crianças estão esperando sua visita :)</p>
-        </header>
+      <aside class="animate-rigth sidebar">
+        <img src="./public/images/map-marker.svg" alt="Happy" />
 
         <footer>
-          <strong>Porto Velho</strong>
-          <p>Rondônia</p>
+          <button onclick="history.back()">
+            <img src="./public/images/arrow-back.svg" />
+          </button>
         </footer>
       </aside>
 
-      <div id="mapid" class="animation-appear"></div>
+      <main class="animation-appear with-sidebar">
+        <div class="orfanato-details">
+          <img src="./public/images/home.jpg" alt="Casa Familia Rosetta" />
 
-      <a
-        href="cadastrar-orfanato.html"
-        class="cadastrar-orfanato"
-        title="Cadastre um orfanato"
-        ><img src="./public/images/plus.svg" alt="Cadastrar orfanato"
-      /></a>
+          <div class="imagens">
+            <button onclick="selectImage(event)" class="active" type="button">
+              <img src="https://source.unsplash.com/random?id=1" />
+            </button>
+            <button onclick="selectImage(event)" class="active" type="button">
+              <img src="https://source.unsplash.com/random?id=2" /></button
+            ><button onclick="selectImage(event)" class="active" type="button">
+              <img src="https://source.unsplash.com/random?id=3" /></button
+            ><button onclick="selectImage(event)" class="active" type="button">
+              <img src="https://source.unsplash.com/random?id=4" /></button
+            ><button onclick="selectImage(event)" class="active" type="button">
+              <img src="https://source.unsplash.com/random?id=5" />
+            </button>
+            <button onclick="selectImage(event)" class="active" type="button">
+              <img src="https://source.unsplash.com/random?id=6" />
+            </button>
+          </div>
 
-      <script src="./public/script/localizar_orfanatos.js"></script>
+          <!----------conteudo orfanato inicio-------->
+          <div class="orfanato-details-content">
+            <h1>Casa Familia Rosetta</h1>
+            <p>
+              Presta assistência a crianças 6 a 18 anos - Feminino 6 a 18 anos -
+              Masculino, que se encontre em situação de risco e/ou
+              vulnerabilidade social.
+            </p>
+            <div class="map-container">
+              <div id="mapid"></div>
+              <footer><a href="">Ver rotas no Google Maps</a></footer>
+            </div>
+            <hr />
+            <h2>Instruções para visita</h2>
+            <p>
+              Venha como se sentir a vontade e traga muito amor e paciência para
+              dar.
+            </p>
+            <div class="open-details">
+              <div class="hour">
+                <img src="./public/images/clock.svg" alt="Horários" />
+                Horário de visitas Das 18h até 8h
+              </div>
+              <div class="weekends">
+                <img src="./public/images/info.svg" alt="Informações" />
+                Atendemos fim de semana
+              </div>
+            </div>
+            <button type="button" class="primary-button">
+              <img src="./public/images/whatsapp.svg" alt="Contato WhatsApp" />
+              Entrar em contato
+            </button>
+          </div>
+          <!----------conteudo orfanato fim-------->
+        </div>
+      </main>
     </div>
+    <script src="./public/script/orfanatos.js"></script>
   </body>
 </html>
