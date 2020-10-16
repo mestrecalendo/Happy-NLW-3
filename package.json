@@ -1,0 +1,23 @@
+{
+  "name": "Happy-nlw",
+  "version": "1.0.0",
+  "description": "<h3>Projeto desenvolvido na Next Level Week 3</h3>\r <hr>\r <div>\r <img src=\"./imgp/nlw.jpg\" width=\"1000px\"/>\r </div>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mestrecalendo/Happy-NLW-3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mestrecalendo/Happy-NLW-3/issues"
+  },
+  "homepage": "https://github.com/mestrecalendo/Happy-NLW-3#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
