@@ -6,7 +6,7 @@ const options = {
   zoomControl: false,
 };
 
-const map = L.map("mapid", options).setView([-8.7685893, -63.9004017], 15.4);
+const map = L.map("mapid", options).setView([-8.7685893, -63.9004017], 16);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
