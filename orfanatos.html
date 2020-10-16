@@ -1,105 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Casa Familia Rosetta | Happy</title>
 
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-      crossorigin=""
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casa Familia Rosetta | Happy</title>
 
-    <script
-      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-      crossorigin=""
-    ></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
 
-    <link rel="icon" href="./public/images/logo-icon.png" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
 
-    <link rel="stylesheet" href="./public/css/estilo.css" />
-    <link rel="stylesheet" href="./public/css/animation.css" />
-    <link rel="stylesheet" href="./public/css/orfanatos.css" />
+  <link rel="icon" href="./public/images/logo-icon.png" />
+  <link rel="stylesheet" href="./public/css/sidebar.css" />
+  <link rel="stylesheet" href="./public/css/estilo.css" />
+  <link rel="stylesheet" href="./public/css/animation.css" />
+  <link rel="stylesheet" href="./public/css/orfanatos.css" />
+  <link rel="stylesheet" href="./public/css/map.css" />
+  <link rel="stylesheet" href="./public/css/buttons.css" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="container-orfanato">
-      <aside class="animate-rigth sidebar">
-        <img src="./public/images/map-marker.svg" alt="Happy" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
 
-        <footer>
-          <button onclick="history.back()">
-            <img src="./public/images/arrow-back.svg" />
+<body>
+  <div id="container-orfanato">
+    <aside class="animate-rigth sidebar">
+      <img src="./public/images/map-marker.svg" alt="Happy" />
+
+      <footer>
+        <button onclick="history.back()">
+          <img src="./public/images/arrow-back.svg" />
+        </button>
+      </footer>
+    </aside>
+
+    <main class="animation-appear with-sidebar">
+      <div class="orfanato-details">
+        <img src="./public/images/home.jpg" alt="Casa Familia Rosetta" />
+
+        <div class="imagens">
+          <button onclick="selectImage(event)" class="active" type="button">
+            <img src="https://source.unsplash.com/random?id=1" />
           </button>
-        </footer>
-      </aside>
-
-      <main class="animation-appear with-sidebar">
-        <div class="orfanato-details">
-          <img src="./public/images/home.jpg" alt="Casa Familia Rosetta" />
-
-          <div class="imagens">
-            <button onclick="selectImage(event)" class="active" type="button">
-              <img src="https://source.unsplash.com/random?id=1" />
-            </button>
-            <button onclick="selectImage(event)" class="active" type="button">
-              <img src="https://source.unsplash.com/random?id=2" /></button
-            ><button onclick="selectImage(event)" class="active" type="button">
-              <img src="https://source.unsplash.com/random?id=3" /></button
-            ><button onclick="selectImage(event)" class="active" type="button">
-              <img src="https://source.unsplash.com/random?id=4" /></button
-            ><button onclick="selectImage(event)" class="active" type="button">
-              <img src="https://source.unsplash.com/random?id=5" />
-            </button>
-            <button onclick="selectImage(event)" class="active" type="button">
-              <img src="https://source.unsplash.com/random?id=6" />
-            </button>
-          </div>
-
-          <!----------conteudo orfanato inicio-------->
-          <div class="orfanato-details-content">
-            <h1>Casa Familia Rosetta</h1>
-            <p>
-              Presta assistência a crianças 6 a 18 anos - Feminino 6 a 18 anos -
-              Masculino, que se encontre em situação de risco e/ou
-              vulnerabilidade social.
-            </p>
-            <div class="map-container">
-              <div id="mapid"></div>
-              <footer><a href="">Ver rotas no Google Maps</a></footer>
-            </div>
-            <hr />
-            <h2>Instruções para visita</h2>
-            <p>
-              Venha como se sentir a vontade e traga muito amor e paciência para
-              dar.
-            </p>
-            <div class="open-details">
-              <div class="hour">
-                <img src="./public/images/clock.svg" alt="Horários" />
-                Horário de visitas Das 18h até 8h
-              </div>
-              <div class="weekends">
-                <img src="./public/images/info.svg" alt="Informações" />
-                Atendemos fim de semana
-              </div>
-            </div>
-            <button type="button" class="primary-button">
-              <img src="./public/images/whatsapp.svg" alt="Contato WhatsApp" />
-              Entrar em contato
-            </button>
-          </div>
-          <!----------conteudo orfanato fim-------->
+          <button onclick="selectImage(event)" class="active" type="button">
+            <img src="https://source.unsplash.com/random?id=2" /></button><button onclick="selectImage(event)"
+            class="active" type="button">
+            <img src="https://source.unsplash.com/random?id=3" /></button><button onclick="selectImage(event)"
+            class="active" type="button">
+            <img src="https://source.unsplash.com/random?id=4" /></button><button onclick="selectImage(event)"
+            class="active" type="button">
+            <img src="https://source.unsplash.com/random?id=5" />
+          </button>
+          <button onclick="selectImage(event)" class="active" type="button">
+            <img src="https://source.unsplash.com/random?id=6" />
+          </button>
         </div>
-      </main>
-    </div>
-    <script src="./public/script/orfanatos.js"></script>
-  </body>
+
+        <!----------conteudo orfanato inicio-------->
+        <div class="orfanato-details-content">
+          <h1>Casa Familia Rosetta</h1>
+          <p>
+            Presta assistência a crianças 6 a 18 anos - Feminino 6 a 18 anos -
+            Masculino, que se encontre em situação de risco e/ou
+            vulnerabilidade social.
+          </p>
+          <div class="map-container">
+            <div id="mapid"></div>
+            <footer><a href="">Ver rotas no Google Maps</a></footer>
+          </div>
+          <hr />
+          <h2>Instruções para visita</h2>
+          <p>
+            Venha como se sentir a vontade e traga muito amor e paciência para
+            dar.
+          </p>
+          <div class="open-details">
+            <div class="hour">
+              <img src="./public/images/clock.svg" alt="Horários" />
+              Horário de visitas Das 18h até 8h
+            </div>
+            <div class="weekends">
+              <img src="./public/images/info.svg" alt="Informações" />
+              Atendemos fim de semana
+            </div>
+          </div>
+          <button type="button" class="primary-button">
+            <img src="./public/images/whatsapp.svg" alt="Contato WhatsApp" />
+            Entrar em contato
+          </button>
+        </div>
+        <!----------conteudo orfanato fim-------->
+      </div>
+    </main>
+  </div>
+  <script src="./public/script/orfanatos.js"></script>
+</body>
+
 </html>
