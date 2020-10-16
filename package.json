@@ -4,7 +4,7 @@
   "description": "<h3>Projeto desenvolvido na Next Level Week 3</h3>\r <hr>\r <div>\r <img src=\"./imgp/nlw.jpg\" width=\"1000px\"/>\r </div>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/mestrecalendo/Happy-NLW-3#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "nodemon": "^2.0.5"
   }
 }
