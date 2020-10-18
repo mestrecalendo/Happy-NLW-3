@@ -30,7 +30,7 @@ map.on("click", (event) => {
 
 function addFoto() {
   //pegar o container de fotos
-  const container = document.querySelector("#imagens");
+  const container = document.querySelector("#images");
   //pegar o container para duplicar .new-upload
   const fieldsContainer = document.querySelectorAll(".new-upload");
   //realizar duplicação
@@ -80,7 +80,19 @@ function toggle(event) {
   button.classList.add("active");
 
   //atualizar o input hidden com o valor selecionado
-  const input = document.querySelector('[name="open_weekends"]');
+  const input = document.querySelector('[name="open_weekends"]')
   input.value = button.dataset.value;
+}
+
+function validate(event){
+  //validar se a lat e lng estão preenchidos
+
+const needsLatAndLng = false;
+if(needsLatAndLng){
+  event.preventDefault()
+  alert('Selecione um ponto no mapa')
+}
+
+
 }
 

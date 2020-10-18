@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Casa Familia Rosetta | Happy</title>
+  <title>{{ orfanato.name }} | Happy</title>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -39,61 +39,55 @@
     </aside>
 
     <main class="animation-appear with-sidebar">
-  
-      <div class="orfanato-details">
-        <img src="https://source.unsplash.com/random?id=1" alt="Casa Familia Rosetta" />
 
-        <div class="imagens">
+      <div class="orfanato-details">
+        <img src="{{orfanato.firstImage}}" alt="{{orfanato.name}}" />
+
+        <div class="images">
+          {{#each orfanato.images }}
           <button onclick="selectImage(event)" class="active" type="button">
-            <img src="https://source.unsplash.com/random?id=1" />
+            <img src="{{this}}" alt="{{orfanato.name}}" />
           </button>
-          <button onclick="selectImage(event)" class="active" type="button">
-            <img src="https://source.unsplash.com/random?id=2" /></button><button onclick="selectImage(event)"
-            class="active" type="button">
-            <img src="https://source.unsplash.com/random?id=3" /></button><button onclick="selectImage(event)"
-            class="active" type="button">
-            <img src="https://source.unsplash.com/random?id=4" /></button><button onclick="selectImage(event)"
-            class="active" type="button">
-            <img src="https://source.unsplash.com/random?id=5" />
-          </button>
-          <button onclick="selectImage(event)" class="active" type="button">
-            <img src="https://source.unsplash.com/random?id=6" />
-          </button>
+          {{/each}}
         </div>
 
         <!----------conteudo orfanato inicio-------->
         <div class="orfanato-details-content">
-          <h1>Casa Familia Rosetta</h1>
-          <p>
-            Presta assistência a crianças 6 a 18 anos - Feminino 6 a 18 anos -
-            Masculino, que se encontre em situação de risco e/ou
-            vulnerabilidade social.
-          </p>
+          <h1> {{orfanato.name }} </h1>
+          <p>{{ orfanato.about }}</p>
           <div class="map-container">
             <div id="mapid"></div>
-
-            <footer><a href="">Ver rotas no Google Maps</a></footer>
+            <span data-lat="{{ orfanato.lat}}" data-lng="{{ orfanato.lng}}"></span>
+            <footer><a target="_blank" href="https://google.com/maps/place/mobile?q={{orfanato.name }}&z=16">Ver rotas
+                no Google Maps</a></footer>
           </div>
           <hr />
           <h2>Instruções para visita</h2>
-          <p>
-            Venha como se sentir a vontade e traga muito amor e paciência para
-            dar.
-          </p>
+          <p>{{ orfanato.instructions }}</p>
           <div class="open-details">
             <div class="hour">
               <img src="/images/clock.svg" alt="Horários" />
-              Horário de visitas Das 18h até 8h
+              {{orfanato.hours}}
             </div>
-            <div class="weekends">
+            {{#if orfanato.open_weekends}}
+            <div class="weekends open">
               <img src="/images/info.svg" alt="Informações" />
               Atendemos fim de semana
             </div>
+            {{else}}
+            <div class="weekends closed">
+
+              <img src="/images/info-red.svg" alt="Informações" />
+              Não atendemos fim de semana
+            </div>
+            {{/if}}
+
           </div>
-          <button type="button" class="primary-button">
+          <a href="https://api.whatsapp.com/send?l=pt_BR&phone={{orfanato.wpp}}" target="_blank" type="button"
+            class="primary-button">
             <img src="/images/whatsapp.svg" alt="Contato WhatsApp" />
             Entrar em contato
-          </button>
+          </a>
         </div>
         <!----------conteudo orfanato fim-------->
       </div>

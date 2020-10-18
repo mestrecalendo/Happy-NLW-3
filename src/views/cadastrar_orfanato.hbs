@@ -40,7 +40,7 @@
     </aside>
 
     <main class="animation-appear with-sidebar">
-      <form>
+      <form action="save-orfanatos" method="post" onsubmit="validate(event)">
         <fieldset>
           <legend>Dados</legend>
 
@@ -84,12 +84,12 @@
 
           <div class="input-block img">
 
-            <label form="imagens">Foto
+            <label form="images" id="images" name="images">Foto
             </label>
 
-            <div class="imagens-upload" id="imagens">
+            <div class="images-upload" id="images" name="images">
               <div class="new-upload">
-                <input name="imagens" placeholder="Cole o link da foto aqui" required />
+                <input name="images" id="images" type="url" placeholder="Cole o link da foto aqui" required />
                 <span onclick="deletefield(event)">
                   <img src="/images/remove-foto.svg" alt="Remover foto">
                 </span>
@@ -109,17 +109,17 @@
 
           <div class="input-block">
 
-            <label form="instrucao">Instruções
+            <label form="instructions">Instruções
             </label>
-            <textarea id="instrucao" name="instrucao" required></textarea>
+            <textarea id="instructions" name="instructions" required></textarea>
           </div>
 
           <div class="input-block">
 
-            <label form="visit_time">Horário das visitas
+            <label form="hours">Horário das visitas
             </label>
 
-            <input id="visit_time" name="visit_time" required>
+            <input id="hours" name="hours" required>
             </input>
           </div>
 

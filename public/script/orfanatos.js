@@ -6,7 +6,14 @@ const options = {
   zoomControl: false,
 };
 
-const map = L.map("mapid", options).setView([-8.7685893, -63.9004017], 16);
+
+//get value from html 
+const lat = document.querySelector('span[data-lat]').dataset.lat;
+const lng = document.querySelector('span[data-lng]').dataset.lng;
+
+//creat map
+const map = L.map("mapid", options).setView([lat, lng], 15);
+
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
@@ -18,12 +25,13 @@ var icon = L.icon({
   popupAnchor: [170, 2], // point from which the popup should open relative to the iconAnchor
 });
 
-L.marker([-8.7716113, -63.8994147], { icon: icon }).addTo(map);
+//create and add marker
+L.marker([lat, lng], { icon: icon }).addTo(map);
 
 function selectImage(event) {
   const button = event.currentTarget;
 
-  const buttons = document.querySelectorAll(".imagens button");
+  const buttons = document.querySelectorAll(".images button");
 
   console.log(buttons);
   buttons.forEach(removeActiveClass);

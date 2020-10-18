@@ -9,8 +9,7 @@ module.exports = [
     images: [
       "https://images.unsplash.com/photo-1599988288485-534984f5cd21?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
     ],
-    instructions:
-      "Venha como se sentir a vontade e traga muito amor e paciência para dar.",
+    instructions:"Venha como se sentir a vontade e traga muito amor e paciência para dar.",
     hours: "Horario de visitas das 8h as 18h",
     open_weekends: "1",
   },
@@ -22,9 +21,8 @@ module.exports = [
     description: "Presta assistência a crianças 6 a 18 anos - Feminino",
 
     images: [
-      "https://images.unsplash.com/photo-1599988288485-534984f5cd21?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
-      "https://images.unsplash.com/photo-1562790519-bc8a4a47cd0e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
-      "https://images.unsplash.com/photo-1570662518230-e097e6620e12?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
+      "https://images.unsplash.com/photo-1599988288485-534984f5cd21?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9"
+     
     ],
     instructions: "Venha como se sentir a vontade e traga muito amor.",
     hours: "Horario de visitas das 7h as 18h",

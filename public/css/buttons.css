@@ -5,6 +5,7 @@
 
 .primary-button img {
   margin-right: 1.6rem;
+  text-decoration: none;
 }
 .primary-button {
   margin-top: 6.4rem;
@@ -15,7 +16,7 @@
   background: #3cdc8c;
   cursor: pointer;
   color: white;
-
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
