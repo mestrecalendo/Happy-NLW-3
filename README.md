@@ -12,9 +12,9 @@
 <h2>Happy</h2>
   <h4>Visite um orfanato!</h4>
   <p align="center">
-   <i>O projeto tem como inspiração as Instituições de Caridade, que realizam um trabalho muito importante no mundo. E tem como intenção incentivar a visitação de crianças em orfanatos, que é uma coisa linda ver a felicidade de crianças.<br>
+   <i>"O projeto tem como inspiração as Instituições de Caridade, que realizam um trabalho muito importante no mundo. E tem como intenção incentivar a visitação de crianças em orfanatos, que é uma coisa linda ver a felicidade de crianças.<br>
       E o desafio da semana, era propor não só programar, mas também nos trazer uma pequena reflexão. 😀<br>
-     Vamos levar felicidade para o mundo! 😊</i>
+     Vamos levar felicidade para o mundo!" 😊</i>
 <br>
     <strong>
 <a href="https://github.com/felipecastrosales/Happy">felipecastrosales</a>
